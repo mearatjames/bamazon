@@ -52,8 +52,6 @@ function purchasePrompt(itemList) {
     )
     .then(function(answer) {
         let id = answer.item.match(/^Item ID: (\d+)/)[1]
-        console.log(id)
-        console.log(answer.quantity)
         placeOrder(id, answer.quantity)
     })
 }
@@ -63,15 +61,16 @@ function placeOrder(id, quantity) {
         if (err) throw err
         if(quantity > res[0].stock_quantity) {
             console.log('Insufficient quantity!!')
+            homeInquirer()
         } else {
             let newQty = res[0].stock_quantity - quantity
             connection.query('UPDATE products SET ? WHERE ?', [{stock_quantity: newQty}, {item_id: id}], function(err, res) {
                 if (err) throw err
                 console.log('Order placed!!')
+                homeInquirer()
             })
             // console.log('Placing the order...')
         }
-        console.log(res[0])
     })
 }
 
@@ -81,4 +80,21 @@ function validateNumber(val) {
     } else {
         return 'Invalid quantity input!!'
     }  
+}
+
+function homeInquirer() {
+    inquirer
+    .prompt({
+      name: "home",
+      type: "list",
+      message: "Would you like to go back to home screen?",
+      choices: ['Yes', "No, exit the app!"]
+    })
+    .then(function(answer) {
+        if(answer.home === 'Yes') {
+            appStart()
+        } else {
+           process.exit() 
+        }
+    })
 }
