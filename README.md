@@ -7,10 +7,10 @@ This is a CLI Application of the Amazon-like storefront. The app will take in or
 
 ## Initial Setup
 
-This application requires the mySQL installed and setup to host the database via the localhost. Please visit [www.mysql.com] (https://www.mysql.com/) and download/install mysql community server and workbench.
-Once MySQL is installed, run the [bamazon.sql] (https://github.com/mearatjames/bamazon/blob/dev/bamazon.sql) to create the initial database.
+This application requires the mySQL installed and setup to host the database via the localhost. Please visit [www.mysql.com](https://www.mysql.com/) and download/install mysql community server and workbench.
+Once MySQL is installed, run the [bamazon.sql](https://github.com/mearatjames/bamazon/blob/dev/bamazon.sql) to create the initial database.
 
-Please note that NODE JS is required to run this CLI app. Visit [NODE JS] (https://nodejs.org/en/) to learn more.
+Please note that NODE JS is required to run this CLI app. Visit [NODE JS](https://nodejs.org/en/) to learn more.
 
 ## How The App Works
 
