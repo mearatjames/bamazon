@@ -1,4 +1,4 @@
-# bamazon
+# Bamazon
 ## CLI APP (Using NODE JS, MySQL, and Inquirer npm packages)
 
 ## Description
