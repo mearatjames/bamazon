@@ -22,4 +22,4 @@ Please note that NODE JS is required to run this CLI app. Visit [NODE JS](https:
 
 ## App demo
 
-View app demo[here](https://drive.google.com/file/d/1u6HlF6i4XTrmaTuMl3-TU-Adq6Ph40dr/view)
+View app demo [here](https://drive.google.com/file/d/1u6HlF6i4XTrmaTuMl3-TU-Adq6Ph40dr/view)
